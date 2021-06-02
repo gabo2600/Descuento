@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --c_green: rgb(16, 180, 158);
+      --c_green2: rgb(52, 218, 196);
+      --c_green3: rgb(130, 201, 16);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: 'karla';
+      font-size: 17px;
+    }
+
+
+
+    body {
+      background-color: rgb(214, 234, 253);
+      text-align: center;
+    }
+
+    .container_col-left {
+      text-align: left;
+      grid-area: left;
+      color: white;
+      padding: 30px;
+      width: 2fr;
+      border-radius: 0 0 0 10px;
+      background-color: var(--c_green);
+    }
+
+    .container_col-right {
+      text-align: left;
+      grid-area: right;
+      color: white;
+      padding: 30px;
+      width: 1fr;
+      border-radius: 0 0 10px 0;
+      background-color: var(--c_green2);
+    }
+
+    .container-top {
+      grid-area: top;
+      text-align: left;
+      color: gray;
+      border-radius: 10px 10px 0 0;
+      padding: 30px;
+      background-color: white;
+    }
+
+    .grid {
+      box-shadow: 1px 1px 20px #888;
+      display: grid;
+      position: absolute;
+      margin-top: 6vh;
+      margin-bottom: 60vh;
+      margin-left: 25vw;
+      margin-right: 25vw;
+      grid-template: 'top top'
+        'left right';
+    }
+
+    @media screen and (max-width: 480px) {
+      .grid {
+        box-shadow: 1px 1px 20px #888;
+        display: grid;
+        position: absolute;
+        margin-top: 6vh;
+        margin-bottom: 60vh;
+        margin-left: 25vw;
+        margin-right: 25vw;
+        grid-template: 'top'
+          'left'
+          'right';
+      }
+    }
+
+    #col1 {
+      color: var(--c_green);
+    }
+
+    #col2 {
+      color: var(--c_green2);
+    }
+
+    #col3 {
+      color: var(--c_green3);
+    }
+
+    h2,
+    div {
+      display: inline;
+    }
+
+    p,
+    h3,
+    h2,
+    small {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      color: white;
+      background-color: var(--c_green3);
+      border: none;
+      font-size: 20px;
+      border-radius: 12px;
+      padding-left: 10vh;
+      padding-right: 10vh;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    small {
+      font-size: 15px;
+    }
+
+    h2 {
+      font-size: 35px;
+    }
+
+    h3 {
+      font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="container-top">
+      <h3 id="col1">Join our community</h3>
+
+      <p id="col3">30-day, hassle-free money back guarantee</p>
+
+      <p>Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who
+        are serious about honing their skills.</p>
+    </div>
+    <div class="container_col-left">
+      <h3>Monthly Subscription</h3>
+
+      <h2>$29</h2> <small id="col2">per month</small>
+
+      <p>Full access for less than $1 a day</p>
+
+      <button>SignUp Now</button>
+    </div>
+
+    <div class="container_col-right">
+
+      <h3>Why Us</h3>
+
+      <p>Tutorials by industry experts Peer & expert code review Coding exercises Access to our GitHub repos
+        Community forum Flashcard decks New videos every week</p>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
